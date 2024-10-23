@@ -1,0 +1,130 @@
+{
+  "nodes": {
+    "nixCats": {
+      "locked": {
+        "dir": "nix",
+        "lastModified": 1729633980,
+        "narHash": "sha256-DU9zM6Kq+Nt8td8oliazThxM1WTr3pKqDA9mlETCfpM=",
+        "owner": "BirdeeHub",
+        "repo": "nixCats-nvim",
+        "rev": "0463976aac6d049510f9384060822ebec01a5f50",
+        "type": "github"
+      },
+      "original": {
+        "dir": "nix",
+        "owner": "BirdeeHub",
+        "repo": "nixCats-nvim",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1729501122,
+        "narHash": "sha256-tScdcYQ37kMqlyqb5yizNDTKXZASLB4zHitlHwOg+/o=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "56c7c4a3f5fdbef5bf81c7d9c28fbb45dc626611",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "plugins-ascii-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1707236197,
+        "narHash": "sha256-6BMb+pSmgkeuFteLUCoqMOzdKQU/du6VgsZ42pP5DAk=",
+        "owner": "MaximilianLloyd",
+        "repo": "ascii.nvim",
+        "rev": "c1a315e811fa7c133f8f4827e63015a480d8a81b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MaximilianLloyd",
+        "repo": "ascii.nvim",
+        "type": "github"
+      }
+    },
+    "plugins-oh-lucy-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1718844168,
+        "narHash": "sha256-Iu1W/bsHChJ2ADw1MLqKmJ5CLP66K5+xDUsIFkbrlKQ=",
+        "owner": "Yazeed1s",
+        "repo": "oh-lucy.nvim",
+        "rev": "87d6bcb4e757ec76b77690c0143353cc5cfd4d72",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Yazeed1s",
+        "repo": "oh-lucy.nvim",
+        "type": "github"
+      }
+    },
+    "plugins-prettier-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1686934076,
+        "narHash": "sha256-4xq+caprcQQotvBXnWWSsMwVB2hc5uyjrhT1dPBffXI=",
+        "owner": "MunifTanjim",
+        "repo": "prettier.nvim",
+        "rev": "d98e732cb73690b07c00c839c924be1d1d9ac5c2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MunifTanjim",
+        "repo": "prettier.nvim",
+        "type": "github"
+      }
+    },
+    "plugins-sonarlint-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1700333924,
+        "narHash": "sha256-fL6wC6WJ3Hv4cqCjFdqB65g9jYyKLK2zfDwbggXILzU=",
+        "owner": "danarth",
+        "repo": "sonarlint.nvim",
+        "rev": "8c13a7f294eaaed01b86be3113c608dc28bc5a27",
+        "type": "github"
+      },
+      "original": {
+        "owner": "danarth",
+        "repo": "sonarlint.nvim",
+        "type": "github"
+      }
+    },
+    "plugins-vim-rest-console": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1553296776,
+        "narHash": "sha256-Us7LLK/GJsFyIIROGn4y0k8c3yz+Y/X+WWwHcRqL+PQ=",
+        "owner": "diepm",
+        "repo": "vim-rest-console",
+        "rev": "7b407f47185468d1b57a8bd71cdd66c9a99359b2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "diepm",
+        "repo": "vim-rest-console",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixCats": "nixCats",
+        "nixpkgs": "nixpkgs",
+        "plugins-ascii-nvim": "plugins-ascii-nvim",
+        "plugins-oh-lucy-nvim": "plugins-oh-lucy-nvim",
+        "plugins-prettier-nvim": "plugins-prettier-nvim",
+        "plugins-sonarlint-nvim": "plugins-sonarlint-nvim",
+        "plugins-vim-rest-console": "plugins-vim-rest-console"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
