@@ -49,6 +49,22 @@
         "type": "github"
       }
     },
+    "plugins-format-on-save": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1716222518,
+        "narHash": "sha256-07RWMrBDVIH3iGgo2RcNDhThSrR/Icijcd//MOnBzpA=",
+        "owner": "elentok",
+        "repo": "format-on-save.nvim",
+        "rev": "fed870bb08d9889580f5ca335649da2074bd4b6f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "elentok",
+        "repo": "format-on-save.nvim",
+        "type": "github"
+      }
+    },
     "plugins-oh-lucy-nvim": {
       "flake": false,
       "locked": {
@@ -81,22 +97,6 @@
         "type": "github"
       }
     },
-    "plugins-sonarlint-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1700333924,
-        "narHash": "sha256-fL6wC6WJ3Hv4cqCjFdqB65g9jYyKLK2zfDwbggXILzU=",
-        "owner": "danarth",
-        "repo": "sonarlint.nvim",
-        "rev": "8c13a7f294eaaed01b86be3113c608dc28bc5a27",
-        "type": "github"
-      },
-      "original": {
-        "owner": "danarth",
-        "repo": "sonarlint.nvim",
-        "type": "github"
-      }
-    },
     "plugins-vim-rest-console": {
       "flake": false,
       "locked": {
@@ -118,9 +118,9 @@
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs",
         "plugins-ascii-nvim": "plugins-ascii-nvim",
+        "plugins-format-on-save": "plugins-format-on-save",
         "plugins-oh-lucy-nvim": "plugins-oh-lucy-nvim",
         "plugins-prettier-nvim": "plugins-prettier-nvim",
-        "plugins-sonarlint-nvim": "plugins-sonarlint-nvim",
         "plugins-vim-rest-console": "plugins-vim-rest-console"
       }
     }

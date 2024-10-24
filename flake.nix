@@ -15,16 +15,20 @@
 	    flake = false;
     };
 
-    plugins-sonarlint-nvim = {
-	    url = "github:danarth/sonarlint.nvim";
-	    flake = false;
-    };
+    # plugins-sonarlint-nvim = {
+	  #   url = "github:danarth/sonarlint.nvim";
+	  #   flake = false;
+    # };
 
     plugins-vim-rest-console = {
 	    url = "github:diepm/vim-rest-console";
 	    flake = false;
     };
 
+    plugins-format-on-save = {
+	    url = "github:elentok/format-on-save.nvim";
+	    flake = false;
+    };
     plugins-prettier-nvim = {
 	    url = "github:MunifTanjim/prettier.nvim";
 	    flake = false;
@@ -59,26 +63,19 @@
     categoryDefinitions = { pkgs, settings, categories, name, ... }@packageDef: {
       lspsAndRuntimeDeps = {
         general = with pkgs; [
-	        vimPlugins.nvim-lspconfig
-	        vimPlugins.lsp-zero-nvim
-          vimPlugins.cmp-nvim-lsp
-          vimPlugins.cmp-buffer
-          vimPlugins.cmp-path
-          vimPlugins.luasnip
-
-	        vimPlugins.nvim-treesitter.withAllGrammars
-	        vimPlugins.nvim-treesitter-context
 
 	        emmet-language-server
+          # sonarlint-ls
           lua-language-server
           gopls
           xclip
           wl-clipboard
           fd
-          luajitPackages.lua-lsp
           rust-analyzer
+          luajitPackages.lua-lsp
           nodePackages.bash-language-server
           yaml-language-server
+          typescript-language-server
           pyright
           marksman
           black
@@ -90,19 +87,30 @@
           statix
           deadnix
           nil
-        ] ++ pkgs.vimPlugins.nvim-treesitter.withAllGrammars.dependencies;
+        ];
       };
       startupPlugins = {
         gitPlugins = with pkgs.neovimPlugins; [
 	        oh-lucy-nvim 		  # Default theme
 	        ascii-nvim 		    # Dep for dashboard
-	        sonarlint-nvim 	  # Linting
+	        # sonarlint-nvim 	  # Linting
 	        vim-rest-console	# Rest Client
           prettier-nvim     # Formatting
+          format-on-save
 	      ];
         general = with pkgs.vimPlugins; [
 	        # TODO: organize this stuff
-          colorizer
+	        nvim-lspconfig
+	        lsp-zero-nvim
+                cmp-nvim-lsp
+                cmp-buffer
+                cmp-path
+                nvim-cmp
+                luasnip
+
+	        nvim-treesitter.withAllGrammars
+	        nvim-treesitter-context
+                nvim-colorizer-lua
 	        plenary-nvim
 	        nvim-web-devicons
 	        nui-nvim
@@ -130,7 +138,7 @@
 	        dashboard-nvim
 	        autoclose-nvim
 	        vim-closetag
-	      ];
+	      ] ++ pkgs.vimPlugins.nvim-treesitter.withAllGrammars.dependencies;
       };
       optionalPlugins = {
         gitPlugins = with pkgs.neovimPlugins; [ ];
