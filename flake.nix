@@ -29,10 +29,17 @@
 	    url = "github:elentok/format-on-save.nvim";
 	    flake = false;
     };
+
     plugins-prettier-nvim = {
 	    url = "github:MunifTanjim/prettier.nvim";
 	    flake = false;
     };
+
+    plugins-render-markdown-nvim = {
+	    url = "github:MeanderingProgrammer/render-markdown.nvim";
+	    flake = false;
+    };
+
     # neovim-nightly-overlay = {
     #   url = "github:nix-community/neovim-nightly-overlay";
     # };
@@ -81,12 +88,14 @@
           black
           stylua
           prettierd
+          nodePackages.prettier
           mypy
           pylint
           nixfmt-classic
           statix
           deadnix
           nil
+          biome
         ];
       };
       startupPlugins = {
@@ -97,20 +106,21 @@
 	        vim-rest-console	# Rest Client
           prettier-nvim     # Formatting
           format-on-save
+          render-markdown-nvim
 	      ];
         general = with pkgs.vimPlugins; [
 	        # TODO: organize this stuff
 	        nvim-lspconfig
 	        lsp-zero-nvim
-                cmp-nvim-lsp
-                cmp-buffer
-                cmp-path
-                nvim-cmp
-                luasnip
+          cmp-nvim-lsp
+          cmp-buffer
+          cmp-path
+          nvim-cmp
+          luasnip
 
 	        nvim-treesitter.withAllGrammars
 	        nvim-treesitter-context
-                nvim-colorizer-lua
+          nvim-colorizer-lua
 	        plenary-nvim
 	        nvim-web-devicons
 	        nui-nvim
@@ -134,7 +144,6 @@
 	        gitsigns-nvim
 	        oxocarbon-nvim
 	        poimandres-nvim
-	        markdown-nvim
 	        dashboard-nvim
 	        autoclose-nvim
 	        vim-closetag

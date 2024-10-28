@@ -23,7 +23,7 @@ local function split(str, sep)
 end
 
 local function is_file(str)
-  if str == nil then
+  if not str or #str == 0 then
     return false
   end
 

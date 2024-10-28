@@ -97,6 +97,22 @@
         "type": "github"
       }
     },
+    "plugins-render-markdown-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1730063078,
+        "narHash": "sha256-QBrI0P9FlFdBOguchNCARHe1pnUhI+/MkIxUsEKLBJg=",
+        "owner": "MeanderingProgrammer",
+        "repo": "render-markdown.nvim",
+        "rev": "fc05fb7c56795f191b6800799a2ec6ea325ba715",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MeanderingProgrammer",
+        "repo": "render-markdown.nvim",
+        "type": "github"
+      }
+    },
     "plugins-vim-rest-console": {
       "flake": false,
       "locked": {
@@ -121,6 +137,7 @@
         "plugins-format-on-save": "plugins-format-on-save",
         "plugins-oh-lucy-nvim": "plugins-oh-lucy-nvim",
         "plugins-prettier-nvim": "plugins-prettier-nvim",
+        "plugins-render-markdown-nvim": "plugins-render-markdown-nvim",
         "plugins-vim-rest-console": "plugins-vim-rest-console"
       }
     }
