@@ -118,7 +118,6 @@
           nvim-cmp
           luasnip
 
-	        nvim-treesitter.withAllGrammars
 	        nvim-treesitter-context
           nvim-colorizer-lua
 	        plenary-nvim
@@ -128,7 +127,6 @@
 	        nvim-notify
 	        noice-nvim
 	        playground
-	        luasnip
 	        nvim-ts-autotag
 	        harpoon
 	        oil-nvim
