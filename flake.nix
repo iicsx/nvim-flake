@@ -30,10 +30,10 @@
 	    flake = false;
     };
 
-    plugins-prettier-nvim = {
-	    url = "github:MunifTanjim/prettier.nvim";
-	    flake = false;
-    };
+    # plugins-prettier-nvim = {
+	  #   url = "github:MunifTanjim/prettier.nvim";
+	  #   flake = false;
+    # };
 
     plugins-render-markdown-nvim = {
 	    url = "github:MeanderingProgrammer/render-markdown.nvim";
@@ -104,7 +104,7 @@
 	        # ascii-nvim 		    # Dep for dashboard
 	        # sonarlint-nvim 	  # Linting
 	        vim-rest-console	# Rest Client
-          prettier-nvim     # Formatting
+          # prettier-nvim     # Formatting
           format-on-save
           render-markdown-nvim
 	      ];
