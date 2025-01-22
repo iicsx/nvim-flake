@@ -10,10 +10,10 @@
       flake = false;
     };
 
-    plugins-ascii-nvim = {
-	    url = "github:MaximilianLloyd/ascii.nvim";
-	    flake = false;
-    };
+    # plugins-ascii-nvim = {
+	  #   url = "github:MaximilianLloyd/ascii.nvim";
+	  #   flake = false;
+    # };
 
     # plugins-sonarlint-nvim = {
 	  #   url = "github:danarth/sonarlint.nvim";
@@ -101,7 +101,7 @@
       startupPlugins = {
         gitPlugins = with pkgs.neovimPlugins; [
 	        oh-lucy-nvim 		  # Default theme
-	        ascii-nvim 		    # Dep for dashboard
+	        # ascii-nvim 		    # Dep for dashboard
 	        # sonarlint-nvim 	  # Linting
 	        vim-rest-console	# Rest Client
           prettier-nvim     # Formatting
