@@ -8,17 +8,17 @@ format_on_save.setup({
     "/.github/",
     "/.dist/"
   },
-  -- formatter_by_ft = {
-  --   typescript = formatters.prettierd,
-  --   javascript = formatters.prettierd,
-  --   typescriptreact = formatters.prettierd,
-  --   javascriptreact = formatters.prettierd,
-  --   json = formatters.prettierd,
-  --   html = formatters.prettierd,
-  --   css = formatters.prettierd,
-  --   scss = formatters.prettierd,
-  --   vue = formatters.prettierd,
-  -- },
+  formatter_by_ft = {
+    typescript = formatters.prettierd,
+    javascript = formatters.prettierd,
+    typescriptreact = formatters.prettierd,
+    javascriptreact = formatters.prettierd,
+    json = formatters.prettierd,
+    html = formatters.prettierd,
+    css = formatters.prettierd,
+    scss = formatters.prettierd,
+    vue = formatters.prettierd,
+  },
   experiments = {
     partial_update = 'diff',
   },
