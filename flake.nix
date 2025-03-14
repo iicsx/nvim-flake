@@ -25,6 +25,11 @@
 	    flake = false;
     };
 
+    plugins-gp-nvim = {
+	    url = "github:Robitx/gp.nvim";
+	    flake = false;
+    };
+
     plugins-format-on-save = {
 	    url = "github:elentok/format-on-save.nvim";
 	    flake = false;
@@ -107,6 +112,7 @@
           # prettier-nvim     # Formatting
           format-on-save
           render-markdown-nvim
+          gp-nvim
 	      ];
         general = with pkgs.vimPlugins; [
 	        # TODO: organize this stuff
@@ -118,6 +124,7 @@
           nvim-cmp
           luasnip
 
+          copilot-vim
 	        nvim-treesitter-context
           nvim-colorizer-lua
 	        plenary-nvim

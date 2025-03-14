@@ -47,6 +47,22 @@
         "type": "github"
       }
     },
+    "plugins-gp-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726734798,
+        "narHash": "sha256-QUZrFU/+TPBEU8yi9gmyRYjI/u7DP88AxcS0RMk7Jvk=",
+        "owner": "Robitx",
+        "repo": "gp.nvim",
+        "rev": "2372d5323c6feaa2e9c19f7ccb537c615d878e18",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Robitx",
+        "repo": "gp.nvim",
+        "type": "github"
+      }
+    },
     "plugins-oh-lucy-nvim": {
       "flake": false,
       "locked": {
@@ -100,6 +116,7 @@
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs",
         "plugins-format-on-save": "plugins-format-on-save",
+        "plugins-gp-nvim": "plugins-gp-nvim",
         "plugins-oh-lucy-nvim": "plugins-oh-lucy-nvim",
         "plugins-render-markdown-nvim": "plugins-render-markdown-nvim",
         "plugins-vim-rest-console": "plugins-vim-rest-console"
