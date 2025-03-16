@@ -10,16 +10,6 @@
       flake = false;
     };
 
-    # plugins-ascii-nvim = {
-	  #   url = "github:MaximilianLloyd/ascii.nvim";
-	  #   flake = false;
-    # };
-
-    # plugins-sonarlint-nvim = {
-	  #   url = "github:danarth/sonarlint.nvim";
-	  #   flake = false;
-    # };
-
     plugins-vim-rest-console = {
 	    url = "github:diepm/vim-rest-console";
 	    flake = false;
@@ -34,11 +24,6 @@
 	    url = "github:elentok/format-on-save.nvim";
 	    flake = false;
     };
-
-    # plugins-prettier-nvim = {
-	  #   url = "github:MunifTanjim/prettier.nvim";
-	  #   flake = false;
-    # };
 
     plugins-render-markdown-nvim = {
 	    url = "github:MeanderingProgrammer/render-markdown.nvim";
