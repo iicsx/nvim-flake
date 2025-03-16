@@ -30,6 +30,11 @@
 	    flake = false;
     };
 
+    plugins-gint-nvim = {
+	    url = "github:pneumaea/gint-nvim";
+	    flake = false;
+    };
+
     # neovim-nightly-overlay = {
     #   url = "github:nix-community/neovim-nightly-overlay";
     # };
@@ -94,6 +99,7 @@
 	        vim-rest-console	# Rest Client
           format-on-save
           render-markdown-nvim
+          gint-nvim
           gp-nvim
 	      ];
         general = with pkgs.vimPlugins; [
