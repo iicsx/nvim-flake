@@ -1,12 +1,6 @@
 local packer = require('packer')
 
--- local nixCats = require('nixCats')
--- if nixCats or packer == nil then
---   return
--- end
-
 vim.cmd [[packadd packer.nvim]]
-
 
 packer.init({
   display = {
@@ -126,18 +120,15 @@ return packer.startup(function(use)
     'MeanderingProgrammer/markdown.nvim',
     after = { 'nvim-treesitter' },
     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-    config = function()
-      require('render-markdown').setup({})
-    end,
   })
 
-  -- Code Completion
-  -- use('Exafunction/codeium.vim')
-
   -- MISC --
-  use('andweeb/presence.nvim')
   use("diepm/vim-rest-console")
 
-  use('mikavilpas/yazi.nvim')
+  -- Git integration
   use('~/source/repos/lua/gint-nvim')
+
+  -- AI Integration
+  use("robitx/gp.nvim")
+  use('github/copilot.vim')
 end)

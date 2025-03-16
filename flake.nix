@@ -67,7 +67,6 @@
         general = with pkgs; [
 
 	        emmet-language-server
-          # sonarlint-ls
           lua-language-server
           gopls
           xclip
