@@ -91,10 +91,7 @@
       startupPlugins = {
         gitPlugins = with pkgs.neovimPlugins; [
 	        oh-lucy-nvim 		  # Default theme
-	        # ascii-nvim 		    # Dep for dashboard
-	        # sonarlint-nvim 	  # Linting
 	        vim-rest-console	# Rest Client
-          # prettier-nvim     # Formatting
           format-on-save
           render-markdown-nvim
           gp-nvim
