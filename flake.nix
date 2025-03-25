@@ -70,6 +70,7 @@
           lua-language-server
           gopls
           xclip
+          jq
           wl-clipboard
           fd
           rust-analyzer
