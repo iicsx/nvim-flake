@@ -35,6 +35,16 @@
 	    flake = false;
     };
 
+    plugins-obsidian-bridge-nvim = {
+	    url = "github:oflisback/obsidian-bridge.nvim";
+	    flake = false;
+    };
+
+    plugins-obsidian-local-rest-api = {
+	    url = "github:coddingtonbear/obsidian-local-rest-api";
+	    flake = false;
+    };
+
     # neovim-nightly-overlay = {
     #   url = "github:nix-community/neovim-nightly-overlay";
     # };
@@ -101,6 +111,8 @@
           render-markdown-nvim
           gint-nvim
           gp-nvim
+          obsidian-bridge-nvim
+          obsidian-local-rest-api
 	      ];
         general = with pkgs.vimPlugins; [
 	        # TODO: organize this stuff
@@ -113,6 +125,7 @@
           luasnip
 
           copilot-vim
+          obsidian-nvim
 	        nvim-treesitter-context
           nvim-colorizer-lua
 	        plenary-nvim
