@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/nex/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?.lua;/home/nex/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?/init.lua;/home/nex/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?.lua;/home/nex/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/nex/.cache/nvim/packer_hererocks/2.1.1736781742/lib/lua/5.1/?.so"
+local package_path_str = "/home/nex/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?.lua;/home/nex/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?/init.lua;/home/nex/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?.lua;/home/nex/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/nex/.cache/nvim/packer_hererocks/2.1.1741730670/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -117,7 +117,7 @@ _G.packer_plugins = {
   ["gint-nvim"] = {
     loaded = true,
     path = "/home/nex/.local/share/nvim/site/pack/packer/start/gint-nvim",
-    url = "/home/nex/source/repos/lua/gint-nvim"
+    url = "https://github.com/iicsx/gint-nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -225,6 +225,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nex/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["obsidian-bridge.nvim"] = {
+    loaded = true,
+    path = "/home/nex/.local/share/nvim/site/pack/packer/start/obsidian-bridge.nvim",
+    url = "https://github.com/oflisback/obsidian-bridge.nvim"
+  },
+  ["obsidian-local-rest-api"] = {
+    loaded = true,
+    path = "/home/nex/.local/share/nvim/site/pack/packer/start/obsidian-local-rest-api",
+    url = "https://github.com/coddingtonbear/obsidian-local-rest-api"
+  },
+  ["obsidian.nvim"] = {
+    loaded = true,
+    path = "/home/nex/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
+    url = "https://github.com/epwalsh/obsidian.nvim"
   },
   ["oceanic-next.nvim"] = {
     loaded = true,

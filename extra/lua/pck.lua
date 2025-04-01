@@ -121,12 +121,15 @@ return packer.startup(function(use)
     after = { 'nvim-treesitter' },
     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
   })
+	use("oflisback/obsidian-bridge.nvim")
+	use("coddingtonbear/obsidian-local-rest-api")
+	use("epwalsh/obsidian.nvim")
 
   -- MISC --
   use("diepm/vim-rest-console")
 
   -- Git integration
-  use('~/source/repos/lua/gint-nvim')
+  use("iicsx/gint-nvim")
 
   -- AI Integration
   use("robitx/gp.nvim")
