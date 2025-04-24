@@ -144,7 +144,7 @@
 	        rainbow-delimiters-nvim
 	        mini-indentscope
 	        transparent-nvim
-	        tabline-nvim
+	        barbar-nvim
 	        lualine-nvim
 	        fugitive-gitlab-vim
 	        gitsigns-nvim
