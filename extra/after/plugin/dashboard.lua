@@ -92,6 +92,40 @@ local ascii = {
   }
 }
 
+local default_shortcuts = {
+  {
+    icon = ' ',
+    icon_hl = '@variable',
+    desc = 'Files',
+    group = 'Label',
+    action = 'Telescope find_files',
+    key = 'f',
+  },
+  {
+    desc = ' Apps',
+    group = 'DiagnosticHint',
+    -- action = 'Telescope find_files cwd=~/source/repos',
+    action = 'Oil ~/source/repos',
+    key = 'a',
+  },
+  {
+    desc = ' dotfiles',
+    group = 'Number',
+    action = 'Oil ~/source/setup/.dotfiles',
+    key = 'd',
+  },
+  {
+    desc = '󰐥 quit',
+    group = 'Label',
+    action = 'quit',
+    key = 'q',
+  }
+}
+
+if not WITH_CATS then
+  table.insert(default_shortcuts, { desc = '󰊳 Update', group = '@property', action = 'PackerSync', key = 'u' })
+end
+
 db.setup({
   theme = 'hyper',
   config = {
@@ -102,36 +136,7 @@ db.setup({
     ),
     plugins = { enable = true },
     footer = {}, -- removes the footer
-    shortcut = {
-      { desc = '󰊳 Update', group = '@property', action = 'PackerSync', key = 'u' },
-      {
-        icon = ' ',
-        icon_hl = '@variable',
-        desc = 'Files',
-        group = 'Label',
-        action = 'Telescope find_files',
-        key = 'f',
-      },
-      {
-        desc = ' Apps',
-        group = 'DiagnosticHint',
-        -- action = 'Telescope find_files cwd=~/source/repos',
-        action = 'Oil ~/source/repos',
-        key = 'a',
-      },
-      {
-        desc = ' dotfiles',
-        group = 'Number',
-        action = 'Oil ~/source/setup/.dotfiles',
-        key = 'd',
-      },
-      {
-        desc = '󰐥 quit',
-        group = 'Label',
-        action = 'quit',
-        key = 'q',
-      }
-    },
+    shortcut = default_shortcuts,
   },
 })
 
