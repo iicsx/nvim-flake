@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/nex/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
     url = "https://github.com/m4xshen/autoclose.nvim"
   },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/home/nex/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/nex/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -300,11 +305,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nex/.local/share/nvim/site/pack/packer/start/sonarlint.nvim",
     url = "https://github.com/danarth/sonarlint.nvim"
-  },
-  ["tabline.nvim"] = {
-    loaded = true,
-    path = "/home/nex/.local/share/nvim/site/pack/packer/start/tabline.nvim",
-    url = "https://github.com/kdheepak/tabline.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
