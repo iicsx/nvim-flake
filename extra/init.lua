@@ -1,11 +1,11 @@
 local function module_exists(name)
-    local ok, _ = pcall(require, name)
+  local ok, _ = pcall(require, name)
 
-    return ok
+  return ok
 end
 
-local with_cats = module_exists("nixCats")
-if not nixCats then
+WITH_CATS = module_exists("nixCats")
+if not WITH_CATS then
   require("pck")
 end
 
