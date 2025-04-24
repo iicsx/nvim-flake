@@ -10,8 +10,9 @@ vim.keymap.set('n', '<leader>fa', function()
   })
 end)
 
-vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
-vim.keymap.set('n', '<leader>ps', function() 
+vim.keymap.set('n', '<leader>ft', builtin.git_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fs', function() 
 	builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
 
