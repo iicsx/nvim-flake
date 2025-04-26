@@ -39,6 +39,7 @@ return packer.startup(function(use)
       { 'L3MON4D3/LuaSnip' },
     }
   }
+  use('onsails/lspkind.nvim')
   use('windwp/nvim-ts-autotag')
 
   -- File Management
@@ -120,9 +121,9 @@ return packer.startup(function(use)
     after = { 'nvim-treesitter' },
     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
   })
-	use("oflisback/obsidian-bridge.nvim")
-	use("coddingtonbear/obsidian-local-rest-api")
-	use("epwalsh/obsidian.nvim")
+  use("oflisback/obsidian-bridge.nvim")
+  use("coddingtonbear/obsidian-local-rest-api")
+  use("epwalsh/obsidian.nvim")
 
   -- MISC --
   use("diepm/vim-rest-console")
