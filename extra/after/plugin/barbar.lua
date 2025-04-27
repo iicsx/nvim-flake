@@ -20,20 +20,28 @@ local function get_random_icon()
   return random_normal_icon()
 end
 
+
 require('barbar').setup({
   icons = {
+    separator = { left = ' ', right = '' },
+    inactive = {
+      separator = { left = ' ', right = '' },
+    },
     buffer_number = true,
-    separator = { left = '', right = '' },
+    separator_at_end = false,
     modified = { button = get_random_icon() },
     filetype = {
+      custom_colors = true,
       enabled = true
     },
+    diagnostics = {
+      [vim.diagnostic.severity.ERROR] = { enabled = true, icon = ' ' },
+      [vim.diagnostic.severity.WARN] = { enabled = true },
+      [vim.diagnostic.severity.INFO] = { enabled = true },
+      [vim.diagnostic.severity.HINT] = { enabled = true },
+    },
   },
-  -- order by buffer id
-  sort_by = 'id',
 })
-
-vim.api.nvim_set_hl(0, 'BufferLineFill', { bg = 'NONE' })
 
 -- auto command when adding a  new buffer to run BufferOrderByBufferNumber
 vim.api.nvim_create_autocmd('BufAdd', {
