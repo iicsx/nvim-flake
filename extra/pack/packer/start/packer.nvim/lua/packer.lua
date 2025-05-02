@@ -39,8 +39,10 @@ local config_defaults = {
       git_diff_fmt = 'show --no-color --pretty=medium %s',
       get_rev = 'rev-parse --short HEAD',
       get_header = 'log --color=never --pretty=format:FMT --no-show-signature HEAD -n 1',
-      get_bodies = 'log --color=never --pretty=format:"===COMMIT_START===%h%n%s===BODY_START===%b" --no-show-signature HEAD@{1}...HEAD',
-      get_fetch_bodies = 'log --color=never --pretty=format:"===COMMIT_START===%h%n%s===BODY_START===%b" --no-show-signature HEAD...FETCH_HEAD',
+      get_bodies =
+      'log --color=never --pretty=format:"===COMMIT_START===%h%n%s===BODY_START===%b" --no-show-signature HEAD@{1}...HEAD',
+      get_fetch_bodies =
+      'log --color=never --pretty=format:"===COMMIT_START===%h%n%s===BODY_START===%b" --no-show-signature HEAD...FETCH_HEAD',
       submodules = 'submodule update --init --recursive --progress',
       revert = 'reset --hard HEAD@{1}',
       revert_to = 'reset --hard %s --',
@@ -170,7 +172,7 @@ packer.use_rocks = function(rock)
   if type(rock) == 'string' then
     rock = { rock }
   end
-  if not vim.tbl_islist(rock) and type(rock[1]) == 'string' then
+  if not vim.islist(rock) and type(rock[1]) == 'string' then
     rocks[rock[1]] = rock
   else
     for _, r in ipairs(rock) do
@@ -220,12 +222,12 @@ manage = function(plugin_data)
   if plugin_spec.as and plugins[plugin_spec.as] then
     log.error(
       'The alias '
-        .. plugin_spec.as
-        .. ', specified for '
-        .. path
-        .. ' at '
-        .. spec_line
-        .. ' is already used as another plugin name!'
+      .. plugin_spec.as
+      .. ', specified for '
+      .. path
+      .. ' at '
+      .. spec_line
+      .. ' is already used as another plugin name!'
     )
     return
   end
@@ -278,12 +280,12 @@ manage = function(plugin_data)
   if plugin_spec.requires and config.ensure_dependencies then
     -- Handle single plugins given as strings or single plugin specs given as tables
     if
-      type(plugin_spec.requires) == 'string'
-      or (
-        type(plugin_spec.requires) == 'table'
-        and not vim.tbl_islist(plugin_spec.requires)
-        and #plugin_spec.requires == 1
-      )
+        type(plugin_spec.requires) == 'string'
+        or (
+          type(plugin_spec.requires) == 'table'
+          and not vim.islist(plugin_spec.requires)
+          and #plugin_spec.requires == 1
+        )
     then
       plugin_spec.requires = { plugin_spec.requires }
     end
@@ -821,7 +823,7 @@ packer.loader = function(...)
     )
   end
 
-  require 'packer.load'(plugin_list, {}, _G.packer_plugins, force)
+  require 'packer.load' (plugin_list, {}, _G.packer_plugins, force)
 end
 
 -- Completion for not yet loaded plugins
@@ -872,7 +874,7 @@ packer.snapshot = function(snapshot_name, ...)
   manage_all_plugins()
 
   local target_plugins = plugins
-  if next(args) ~= nil then -- provided extra args
+  if next(args) ~= nil then          -- provided extra args
     target_plugins = vim.tbl_filter( -- filter plugins
       function(plugin)
         for k, plugin_shortname in pairs(args) do
@@ -902,15 +904,15 @@ packer.snapshot = function(snapshot_name, ...)
   async(function()
     if write_snapshot then
       await(snapshot.create(snapshot_path, target_plugins))
-        :map_ok(function(ok)
-          log.info(ok.message)
-          if next(ok.failed) then
-            log.warn("Couldn't snapshot " .. vim.inspect(ok.failed))
-          end
-        end)
-        :map_err(function(err)
-          log.warn(err.message)
-        end)
+          :map_ok(function(ok)
+            log.info(ok.message)
+            if next(ok.failed) then
+              log.warn("Couldn't snapshot " .. vim.inspect(ok.failed))
+            end
+          end)
+          :map_err(function(err)
+            log.warn(err.message)
+          end)
     end
   end)()
 end
@@ -934,7 +936,7 @@ packer.rollback = function(snapshot_name, ...)
     manage_all_plugins()
 
     local snapshot_path = vim.loop.fs_realpath(util.join_paths(config.snapshot_path, snapshot_name))
-      or vim.loop.fs_realpath(snapshot_name)
+        or vim.loop.fs_realpath(snapshot_name)
 
     if snapshot_path == nil then
       local warn = fmt("Snapshot '%s' is wrong or doesn't exist", snapshot_name)
@@ -956,17 +958,17 @@ packer.rollback = function(snapshot_name, ...)
     end
 
     await(snapshot.rollback(snapshot_path, target_plugins))
-      :map_ok(function(ok)
-        await(a.main)
-        log.info('Rollback to "' .. snapshot_path .. '" completed')
-        if next(ok.failed) then
-          log.warn("Couldn't rollback " .. vim.inspect(ok.failed))
-        end
-      end)
-      :map_err(function(err)
-        await(a.main)
-        log.error(err)
-      end)
+        :map_ok(function(ok)
+          await(a.main)
+          log.info('Rollback to "' .. snapshot_path .. '" completed')
+          if next(ok.failed) then
+            log.warn("Couldn't rollback " .. vim.inspect(ok.failed))
+          end
+        end)
+        :map_err(function(err)
+          await(a.main)
+          log.error(err)
+        end)
 
     packer.on_complete()
   end)()
