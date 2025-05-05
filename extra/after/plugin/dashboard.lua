@@ -207,7 +207,7 @@ local default_shortcuts = {
 }
 
 if not WITH_CATS then
-  table.insert(default_shortcuts, { desc = '󰊳 Update', group = '@property', action = 'PackerSync', key = 'u' })
+  table.insert(default_shortcuts, { desc = '󰊳 Update', group = '@property', action = 'Lazy update', key = 'u' })
 end
 
 db.setup({

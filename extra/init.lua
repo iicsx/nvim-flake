@@ -4,13 +4,13 @@ local function module_exists(name)
   return ok
 end
 
-WITH_CATS = module_exists("nixCats")
-if not WITH_CATS then
-  require("pck")
-end
-
 require("set")
 require("remap")
+
+WITH_CATS = module_exists("nixCats")
+if not WITH_CATS then
+  require("lze")
+end
 
 DEFAULT_COLOR = "sonokai"
 DEFAULT_BAR_COLOR = "none"
@@ -22,3 +22,6 @@ vim.diagnostic.config({
 })
 
 vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
+vim.cmd("TransparentEnable")
+
+SC()
