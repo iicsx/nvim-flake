@@ -31,6 +31,9 @@ local function remove_lsp_background()
     "DiagnosticSignWarn",
     "DiagnosticSignInfo",
     "DiagnosticSignHint",
+    "DiagnosticVirtualTextError",
+    "Pmenu",
+    "PmenuSel"
   }
 
   remove_background(elements)
@@ -172,21 +175,29 @@ function SC(color)
   color = color or DEFAULT_COLOR
   DEFAULT_COLOR = color
   vim.cmd.colorscheme(color)
-
-  remove_telescope_background()
-  remove_lsp_background()
-  remove_git_background()
-
-  remove_misc_backgrounds({
-    "Normal",
-    "NormalFloat",
-    "SignColumn"
-  })
-
-  vim.api.nvim_set_hl(0, "FloatBorder", { fg = "white", bg = "none" })
-  vim.api.nvim_set_hl(0, "FloatTitle", { fg = "white", bg = "none" })
-
-  apply_buffer_colors()
 end
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = function()
+    remove_telescope_background()
+    remove_lsp_background()
+    remove_git_background()
+
+    remove_misc_backgrounds({
+      "Normal",
+      "NormalNC",
+      "NormalFloat",
+      "SignColumn",
+      "BufferTabpageFill",
+      "TabLineFill",
+    })
+
+    vim.api.nvim_set_hl(0, "FloatBorder", { fg = "white", bg = "none" })
+    vim.api.nvim_set_hl(0, "FloatTitle", { fg = "white", bg = "none" })
+
+    apply_buffer_colors()
+  end
+})
 
 SC()

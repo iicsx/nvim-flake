@@ -186,11 +186,6 @@ _G.packer_plugins = {
     path = "/home/nex/.local/share/nvim/site/pack/packer/start/noice.nvim",
     url = "https://github.com/folke/noice.nvim"
   },
-  ["nordic.nvim"] = {
-    loaded = true,
-    path = "/home/nex/.local/share/nvim/site/pack/packer/start/nordic.nvim",
-    url = "https://github.com/AlexvZyl/nordic.nvim"
-  },
   ["nui.nvim"] = {
     loaded = true,
     path = "/home/nex/.local/share/nvim/site/pack/packer/start/nui.nvim",
@@ -251,11 +246,6 @@ _G.packer_plugins = {
     path = "/home/nex/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
     url = "https://github.com/epwalsh/obsidian.nvim"
   },
-  ["oceanic-next.nvim"] = {
-    loaded = true,
-    path = "/home/nex/.local/share/nvim/site/pack/packer/start/oceanic-next.nvim",
-    url = "https://github.com/roflolilolmao/oceanic-next.nvim"
-  },
   ["oh-lucy.nvim"] = {
     loaded = true,
     path = "/home/nex/.local/share/nvim/site/pack/packer/start/oh-lucy.nvim",
@@ -265,16 +255,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nex/.local/share/nvim/site/pack/packer/start/oil.nvim",
     url = "https://github.com/stevearc/oil.nvim"
-  },
-  ["onenord.nvim"] = {
-    loaded = true,
-    path = "/home/nex/.local/share/nvim/site/pack/packer/start/onenord.nvim",
-    url = "https://github.com/rmehri01/onenord.nvim"
-  },
-  ["oxocarbon.nvim"] = {
-    loaded = true,
-    path = "/home/nex/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
-    url = "https://github.com/nyoom-engineering/oxocarbon.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -310,6 +290,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nex/.local/share/nvim/site/pack/packer/start/sonarlint.nvim",
     url = "https://github.com/danarth/sonarlint.nvim"
+  },
+  sonokai = {
+    loaded = true,
+    path = "/home/nex/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
   },
   ["telescope.nvim"] = {
     loaded = true,

@@ -12,7 +12,7 @@ end
 require("set")
 require("remap")
 
-DEFAULT_COLOR = "oh-lucy"
+DEFAULT_COLOR = "sonokai"
 DEFAULT_BAR_COLOR = "none"
 
 vim.diagnostic.config({
