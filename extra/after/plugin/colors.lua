@@ -33,7 +33,9 @@ local function remove_lsp_background()
     "DiagnosticSignHint",
     "DiagnosticVirtualTextError",
     "Pmenu",
-    "PmenuSel"
+    "PmenuSel",
+    "MsgArea",
+    "LspInfoBorder",
   }
 
   remove_background(elements)
