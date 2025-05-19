@@ -24,8 +24,9 @@ vim.keymap.set("n", "<leader>x", ":bd!<CR>")
 
 vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>")
 
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true })
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true })
+-- No longer needed due to mini.animate (causes issues with scrolling)
+-- vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true })
+-- vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true })
 
 vim.keymap.set("n", "[c", function()
   require("treesitter-context").go_to_context(vim.v.count1) -- jump to immediate context

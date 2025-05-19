@@ -1,5 +1,8 @@
 require("mini.animate").setup({
-  scroll = { enable = true },
+  scroll = { 
+    enable = true,
+    timing = function(t) return t / 3 end,
+  },
 
   cursor = { enable = false },
   open = { enable = false },
