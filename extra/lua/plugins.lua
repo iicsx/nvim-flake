@@ -103,6 +103,7 @@ M.plugins = {
 
   -- MISC --
   "diepm/vim-rest-console",
+  "chomosuke/typst-preview.nvim",
 
   -- Git integration
   "iicsx/gint-nvim",
