@@ -104,6 +104,14 @@ M.plugins = {
   -- MISC --
   "diepm/vim-rest-console",
   "chomosuke/typst-preview.nvim",
+  {
+    "sphamba/smear-cursor.nvim",
+    opts ={
+      smear_between_buffers = false,
+      smear_insert_mode = true,
+      legacy_computing_symbols_support = true,
+    }
+  },
 
   -- Git integration
   "iicsx/gint-nvim",
