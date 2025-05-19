@@ -112,6 +112,7 @@ M.plugins = {
       legacy_computing_symbols_support = true,
     }
   },
+  "echasnovski/mini.animate",
 
   -- Git integration
   "iicsx/gint-nvim",

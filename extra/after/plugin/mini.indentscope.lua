@@ -1,1 +1,3 @@
-require('mini.indentscope').setup()
+require('mini.indentscope').setup({
+  symbol = '┆',
+})
