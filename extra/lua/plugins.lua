@@ -5,10 +5,7 @@ M.plugins = {
   'tpope/vim-fugitive',
 
   -- Tree Sitter
-  {
-    'nvim-treesitter/nvim-treesitter',
-    branch = 'main',
-  },
+  'nvim-treesitter/nvim-treesitter',
   'nvim-treesitter/nvim-treesitter-context',
   'nvim-treesitter/playground',
 

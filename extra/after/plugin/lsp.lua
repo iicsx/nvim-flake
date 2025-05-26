@@ -88,6 +88,16 @@ end)
 
 lsp.setup()
 
+require("lspconfig").rust_analyzer.setup({
+  settings = {
+    ["rust-analyzer"] = {
+      checkOnSave = {
+        command = "clippy"
+      }
+    }
+  }
+})
+
 if WITH_CATS then
   -- LSP Servers
   local lspconfig = require("lspconfig")
