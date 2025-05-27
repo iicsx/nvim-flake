@@ -21,6 +21,19 @@ vim.keymap.set("n", "<leader>n", ":bnext<CR>")
 vim.keymap.set("n", "<leader>b", ":bprevious<CR>")
 vim.keymap.set("n", "<leader>t", ":enew<CR>")
 vim.keymap.set("n", "<leader>x", ":bd!<CR>")
+vim.keymap.set("n", "<leader>X", function()
+  local bufnr = vim.api.nvim_get_current_buf()
+  local buffers = vim.api.nvim_list_bufs()
+
+  for _, buf in ipairs(buffers) do
+    if vim.api.nvim_buf_is_loaded(buf) and buf ~= bufnr then
+      if vim.bo[buf].modified then
+        vim.cmd("write")
+      end
+      vim.cmd("bd! " .. buf)
+    end
+  end
+end, { noremap = true })
 
 vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>")
 vim.keymap.set("n", "<leader>o", ":BufferOrderByBufferNumber<CR>")
