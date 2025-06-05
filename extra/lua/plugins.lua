@@ -118,8 +118,8 @@ M.plugins = {
   "iicsx/gint-nvim",
 
   -- AI Integration
-  "robitx/gp.nvim",
-  'github/copilot.vim',
+  -- "robitx/gp.nvim",
+  -- 'github/copilot.vim',
 }
 
 return M
