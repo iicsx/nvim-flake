@@ -131,7 +131,6 @@
 	        plenary-nvim
 	        nvim-web-devicons
 	        nui-nvim
-	        neo-tree-nvim
 	        nvim-notify
 	        noice-nvim
 	        playground

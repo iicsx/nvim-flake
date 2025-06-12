@@ -35,7 +35,6 @@ vim.keymap.set("n", "<leader>X", function()
   end
 end, { noremap = true })
 
-vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>")
 vim.keymap.set("n", "<leader>o", ":BufferOrderByBufferNumber<CR>")
 
 -- No longer needed due to mini.animate (causes issues with scrolling)
@@ -50,6 +49,8 @@ vim.keymap.set("n", "<leader>cx", ":call VrcQuery()<CR>", { noremap = true })
 
 BUFNUM_GROUP = vim.api.nvim_create_augroup("BufferNumber", { clear = true })
 
+
+-- INTERNAL FUNCTIONS -- 
 local function get_active_buffers()
   local active_buffers = {}
 
