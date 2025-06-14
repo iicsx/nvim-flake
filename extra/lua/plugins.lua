@@ -111,6 +111,8 @@ M.plugins = {
   -- AI Integration
   -- "robitx/gp.nvim",
   -- 'github/copilot.vim',
+
+  'numToStr/Comment.nvim',
 }
 
 return M
