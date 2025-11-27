@@ -1,10 +1,14 @@
 local lsp_servers = {
   "bashls",
   "clangd",
+  "haskell-lsp",
+  "jdtls",
   "lua_ls",
   "marksman",
   "rust_analzer",
+  "tinymist",
   "ts_ls",
+  "verible-verilog-lsp",
   "yamlls",
 }
 vim.lsp.enable(lsp_servers)
